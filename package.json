@@ -1,7 +1,29 @@
 {
   "name": "viterjs-template",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "React + Vite + Redux + Styled-Components + axios + RRD => Boilerplate",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "vite",
+    "redux",
+    "styled-components",
+    "axios",
+    "react-router-dom",
+    "boilerplate",
+    "javascript",
+    "starter"
+  ],
+  "author": "emrecil <info.emrecil@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emre-cil/viterjs-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emre-cil/viterjs-template/issues"
+  },
+  "homepage": "https://github.com/emre-cil/viterjs-template#readme",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
