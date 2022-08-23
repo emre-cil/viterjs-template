@@ -2,24 +2,23 @@
 
 JavaScript + React + Redux + Styled-Components + Axios + ESLint + Prettier
 
+
+![viterjs-template](https://www.linkpicture.com/q/demoimage.png)
 ### Getting Started
 
 #### Clone the repo
 
 ```
-git clone https://github.com/emre-cil/viterjs-template.git
-
-cd viterjs-template
+npx degit emre-cil/viterjs-template my-app
 ```
-
+```
+cd my-app
+```
 #### Install Dependencies
-
 ```
 yarn
 ```
-
 #### Run
-
 ```
 yarn dev
 ```
