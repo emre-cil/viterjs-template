@@ -1,6 +1,6 @@
 {
   "name": "viterjs-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "React + Vite + Redux + Styled-Components + axios + RRD => Boilerplate",
   "license": "MIT",
