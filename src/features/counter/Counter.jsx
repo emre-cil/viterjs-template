@@ -11,7 +11,7 @@ function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.row}>
         <button className={styles.button} aria-label="Decrement value" onClick={() => dispatch(decrement())}>
           -
@@ -24,6 +24,7 @@ function Counter() {
       <div className={styles.row}>
         <input
           className={styles.textbox}
+          type="number"
           aria-label="Set increment amount"
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}

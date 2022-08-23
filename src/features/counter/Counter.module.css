@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
 }
 
 .row > button {
@@ -55,10 +54,16 @@
 }
 
 .asyncButton {
-  composes: button;
   position: relative;
+  composes: button;
 }
-
+.wrapper {
+  background-color: lightgrey;
+  width: 50%;
+  margin: 8rem auto;
+  border-radius: 1rem;
+  padding: 3rem;
+}
 .asyncButton:after {
   content: '';
   background-color: rgba(112, 76, 182, 0.15);
