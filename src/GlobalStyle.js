@@ -11,18 +11,19 @@ export const GlobalStyle = createGlobalStyle`${css`
     --fontBig: 1.5rem;
     --fontMed: 1.2rem;
     --fontSmall: 1rem;
-    --primaryColor: #ff0000;
-    --secondaryColor: #ffd700;
+    --primaryColor: #393e46;
+    --secondaryColor: #00adb5;
   }
 
   * {
     box-sizing: border-box;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Dosis', sans-serif;
   }
 
   body {
     margin: 0;
     padding: 0;
+    background-color: var(--primaryColor);
     h1 {
       font-size: 2rem;
       font-weight: 600;

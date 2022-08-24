@@ -21,7 +21,7 @@ function Counter() {
           +
         </button>
       </div>
-      <div className={styles.row}>
+      <div className={styles.row2}>
         <input
           className={styles.textbox}
           type="number"
