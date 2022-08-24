@@ -11,8 +11,8 @@ export const GlobalStyle = createGlobalStyle`${css`
     --fontBig: 1.5rem;
     --fontMed: 1.2rem;
     --fontSmall: 1rem;
-    --primaryColor: #393e46;
-    --secondaryColor: #00adb5;
+    --primaryColor: #6a2c70;
+    --secondaryColor: #f9ed69;
   }
 
   * {
@@ -23,7 +23,8 @@ export const GlobalStyle = createGlobalStyle`${css`
   body {
     margin: 0;
     padding: 0;
-    background-color: var(--primaryColor);
+    background-image: linear-gradient(90deg, #b83b5e, #f08a5d);
+
     h1 {
       font-size: 2rem;
       font-weight: 600;
