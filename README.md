@@ -3,7 +3,7 @@
 JavaScript + React + Redux + Styled-Components + Axios + ESLint + Prettier
 
 
-![viterjs-template](https://www.linkpicture.com/q/demoimage.png)
+![viterjs-template](https://www.linkpicture.com/q/Screenshot-2022-08-24-171808.png)
 ### Getting Started
 
 #### Clone the repo
