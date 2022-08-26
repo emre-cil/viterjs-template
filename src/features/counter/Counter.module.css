@@ -62,10 +62,6 @@
   border-radius: 5px;
 }
 
-.button:hover,
-.button:focus {
-}
-
 .button:active {
   backdrop-filter: blur(2px);
 }
