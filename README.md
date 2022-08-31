@@ -16,22 +16,22 @@ cd my-app
 ```
 #### Install Dependencies
 ```
-yarn
+pnpm install
 ```
 #### Run
 ```
-yarn dev
+pnpm dev
 ```
 
 ### Scripts
 
 | Script        | Description                        |
 | ------------- | ---------------------------------- |
-| yarn dev      | Runs the application.              |
-| yarn build    | Create builds for the application. |
-| yarn preview  | Runs the Vite preview              |
-| yarn lint     | Display eslint errors              |
-| yarn lint:fix | Fix the eslint errors              |
-| yarn format   | Runs prettier for all files        |
+| pnpm dev      | Runs the application.              |
+| pnpm build    | Create builds for the application. |
+| pnpm preview  | Runs the Vite preview              |
+| pnpm lint     | Display eslint errors              |
+| pnpm lint:fix | Fix the eslint errors              |
+| pnpm format   | Runs prettier for all files        |
 
 ### Check List
