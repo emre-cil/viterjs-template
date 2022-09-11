@@ -1,27 +1,14 @@
-import React from 'react';
 import Counter from '../../features/counter/Counter';
-import styled from 'styled-components';
+import { Typography, Stack } from '@mui/material';
+
 const Home = () => {
   return (
-    <div>
-      <Title>Viterjs-template</Title>
-      <SubTitle>React + Redux + Styled-Components + Axios + ESlint + Prettier</SubTitle>
+    <Stack gap={3} mt={4} alignItems="center">
+      <Typography variant="h1">Viterjs-template</Typography>
+      <Typography variant="h4">React + Redux + MuI + Axios + ESlint + Prettier</Typography>
       <Counter />
-    </div>
+    </Stack>
   );
 };
-
-const Title = styled.h1`
-  color: var(--secondaryColor);
-  font-size: 4rem;
-  text-align: center;
-  margin-top: 4rem;
-`;
-const SubTitle = styled.h2`
-  color: var(--lightGrey);
-  font-size: 2rem;
-  text-align: center;
-  margin: 4rem;
-`;
 
 export default Home;
