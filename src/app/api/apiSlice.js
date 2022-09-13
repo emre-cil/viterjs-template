@@ -3,7 +3,7 @@ import { setCredentials, logOut } from '../../features/user/userSlice';
 
 const baseQuery = fetchBaseQuery({
   baseUrl: 'http://localhost:3500',
-  credentials: 'include',
+  // credentials: 'include',
   tagTypes: ['User'],
   prepareHeaders: (headers, { getState }) => {
     const { token } = getState().auth;

@@ -8,13 +8,13 @@ export const AppThemeProvider = ({ children }) => {
     palette: {
       mode: mode,
       primary: {
-        main: '#F8A52D',
+        main: '#f08a5d',
       },
       secondary: {
-        main: '#0014ad',
+        main: '#b83b5e',
       },
       grey: {
-        50: '#FCFCFC',
+        50: '#FAFCFC',
         100: '#FAFAFA',
         200: mode === 'dark' ? '#1E1E1E' : '#F7F7F7',
         300: mode === 'dark' ? '#3D3D3D' : '#F6F3F3',
@@ -28,7 +28,7 @@ export const AppThemeProvider = ({ children }) => {
         paper: mode === 'dark' ? '#1F1F1F' : '#FCFBFA',
         default: mode === 'dark' ? '#1F1F1F' : '#FCFBFA',
         opposite: mode === 'dark' ? '#FCFBFA' : '#1F1F1F',
-        gradient: 'linear-gradient(180deg, #55bfec 0%, #1c2eb3 100%)',
+        gradient: 'linear-gradient(90deg, #b83b5e, #f08a5d)',
       },
     },
 
@@ -44,7 +44,7 @@ export const AppThemeProvider = ({ children }) => {
       h1: {
         fontSize: '82px',
         fontWeight: '400',
-        color: '#999999',
+        color: mode === 'dark' ? '#FCFBFA' : '#5C5C5C',
         lineHeight: '85px',
         '@media (max-width: 1280px)': {
           fontSize: '50px',
@@ -74,7 +74,7 @@ export const AppThemeProvider = ({ children }) => {
       h4: {
         fontSize: '18px',
         fontWeight: '500',
-        color: '#ABA8AA',
+        color: mode === 'dark' ? '#FCFBFA' : '#5C5C5C',
         lineHeight: '23px',
       },
       h5: {
