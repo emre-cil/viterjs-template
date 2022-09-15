@@ -1,44 +1,36 @@
 import { apiSlice } from '../../app/api/apiSlice';
 
-export const authApiSlice = apiSlice.injectEndpoints({
+export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
-      query: (credentials) => ({
-        url: '/auth',
+      query: (body) => ({
+        url: '/login',
         method: 'POST',
-        body: { ...credentials },
+        body,
       }),
     }),
-  }),
-});
-// get users from /users endpoint with inject apiSlice
-
-// get users from /users endpoint with inject apiSlice
-export const usersApiSlice = apiSlice.injectEndpoints({
-  endpoints: (builder) => ({
-    getUser: builder.mutation({
-      query: () => ({
-        url: '/users',
-        method: 'GET',
+    register: builder.mutation({
+      query: (body) => ({
+        url: '/register',
+        method: 'POST',
+        body,
       }),
     }),
-  }),
-});
-
-export const logOutApiSlice = apiSlice.injectEndpoints({
-  endpoints: (builder) => ({
-    logOutHandle: builder.mutation({
+    logout: builder.mutation({
       query: () => ({
         url: '/logout',
-        method: 'GET',
+        method: 'POST',
+      }),
+    }),
+
+    refresh: builder.mutation({
+      query: () => ({
+        url: '/refresh',
+        method: 'POST',
         withCredentials: true,
       }),
     }),
   }),
 });
 
-export const { useGetUserMutation } = usersApiSlice;
-
-export const { useLoginMutation } = authApiSlice;
-
-export const { useLogOutHandleMutation } = logOutApiSlice;
+export const { useLoginMutation, useLogoutMutation, useRegisterMutation } = userApiSlice;
