@@ -14,13 +14,13 @@ export const AppThemeProvider = ({ children }) => {
         main: '#b83b5e',
       },
       grey: {
-        50: '#FAFCFC',
-        100: '#FAFAFA',
-        200: mode === 'dark' ? '#1E1E1E' : '#F7F7F7',
-        300: mode === 'dark' ? '#3D3D3D' : '#F6F3F3',
-        400: mode === 'dark' ? '#4D4D4D' : '#E6E3E2',
-        500: mode === 'dark' ? '#BDBDBD' : '#85868a',
-        600: mode === 'dark' ? '#E0E0E0' : '#63656A',
+        50: mode === 'dark' ? 'rgb(70, 70, 70)' : 'rgb(246, 243, 243)',
+        100: mode === 'dark' ? 'rgb(90, 90, 90)' : 'rgb(230, 227, 226)',
+        200: mode === 'dark' ? 'rgb(110, 110, 110)' : 'rgb(210, 210, 210)',
+        300: mode === 'dark' ? 'rgb(133, 133, 133)' : 'rgb(190, 190, 190)',
+        400: mode === 'dark' ? 'rgb(155, 155, 155)' : 'rgb(155, 155, 155)',
+        500: mode === 'dark' ? 'rgb(189, 189, 189)' : 'rgb(133, 134, 138)',
+        600: mode === 'dark' ? 'rgb(224, 224, 224)' : 'rgb(99, 101, 106)',
       },
 
       background: {
@@ -137,6 +137,28 @@ export const AppThemeProvider = ({ children }) => {
         fontSize: '16px',
         color: mode === 'dark' ? '#FCFBFA' : '#000',
         lineHeight: '24px',
+      },
+    },
+    components: {
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            color: '#ABA8AA',
+            cursor: 'pointer',
+            textDecoration: 'none',
+            lineHeight: '24px',
+            '&:hover': {
+              color: mode === 'dark' ? 'rgb(224, 224, 224)' : 'rgb(99, 101, 106)',
+            },
+          },
+        },
+      },
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            aspectRatio: '1/1',
+          },
+        },
       },
     },
   });
