@@ -7,6 +7,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
         url: '/login',
         method: 'POST',
         body,
+        credentials: 'include',
       }),
     }),
     register: builder.mutation({
@@ -28,6 +29,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
         url: '/refresh',
         method: 'POST',
         withCredentials: true,
+        credentials: 'include',
       }),
     }),
   }),
