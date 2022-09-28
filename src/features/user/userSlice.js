@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-
 const initialState = {
   token: null,
-  user: null,
+  user: {
+    Id: import.meta.env.VITE_WEB_USER_ID,
+    FirstName: '',
+    LastName: '',
+  },
   mode: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
 };
 
@@ -11,13 +14,13 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     setCredentials: (state, action) => {
-      const { user, accessToken } = action.payload;
-      state.user = user;
-      state.token = accessToken;
+      state.token = action.payload.AccessToken;
+      state.user = action.payload.User;
     },
     logOut: (state) => {
-      state.user = null;
+      state.user = { Id: import.meta.env.VITE_WEB_USER_ID };
       state.token = null;
+      localStorage.removeItem('user');
     },
     setToken: (state, action) => {
       state.token = action.payload;
