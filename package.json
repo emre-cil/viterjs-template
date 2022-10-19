@@ -27,6 +27,8 @@
   "homepage": "https://github.com/emre-cil/viterjs-template#readme",
   "scripts": {
     "dev": "vite --open",
+    "start": "vite --open",
+    "host": "vite --open --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
