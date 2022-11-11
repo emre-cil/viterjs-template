@@ -69,12 +69,12 @@ export const AppThemeProvider = ({ children }) => {
         MuiLink: {
           styleOverrides: {
             root: {
-              color: '#ABA8AA',
               cursor: 'pointer',
               textDecoration: 'none',
-              lineHeight: '24px',
+              lineHeight: '16px',
+              transition: 'all 0.1s ease-in-out',
               '&:hover': {
-                color: mode === 'dark' ? 'rgb(224, 224, 224)' : 'rgb(99, 101, 106)',
+                opacity: 0.8,
               },
             },
           },
