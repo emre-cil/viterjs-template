@@ -2,7 +2,7 @@
 
 JavaScript + React + Redux + Mui + Axios + ESLint + Prettier
 
-![viterjs-template](https://i.ibb.co/TksY3Pm/template-screenviter.png)
+![viterjs-template](https://iili.io/yYpGaV.md.png)
 
 ### Getting Started
 
