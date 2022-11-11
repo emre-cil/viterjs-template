@@ -5,7 +5,7 @@ import { Container } from '@mui/material';
 
 const Home = () => {
   return (
-    <Container>
+    <Container sx={{ py: 2 }}>
       <Stack alignItems="center" gap={1} my={2}>
         <Typography variant="h1">Viterjs-template</Typography>
         <Typography variant="h4">React + Redux + MuI + Axios + ESlint + Prettier</Typography>

@@ -28,7 +28,7 @@ const Theme = () => {
     },
     {
       type: 'grey',
-      colors: ['.50', '.100', '.200', '.300', '.400', '.500', '.600', '.700'],
+      colors: ['.50', '.100', '.200', '.300', '.400', '.500', '.600', '.700', '.800', '.900'],
     },
     {
       type: 'background',
@@ -66,13 +66,13 @@ const Theme = () => {
       }}
       gap={2}
     >
-      <h1>{type}</h1> {func}
+      <Typography variant="h3">{type}</Typography> {func}
     </Stack>
   );
 
   const colorCards = colors.map((cat) => (
     <Stack key={cat.type} gap={1}>
-      <Typography variant="h3">{cat.type}</Typography>
+      <Typography variant="h5">{cat.type}</Typography>
       <Stack direction="row" flexWrap="wrap" gap={2}>
         {cat.colors.map((color) => (
           <Stack key={color}>
