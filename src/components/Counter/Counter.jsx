@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   decrement,
@@ -8,6 +8,7 @@ import {
   incrementIfOdd,
   selectCount,
 } from '../../features/counter/counterSlice';
+import { Box } from '@mui/material';
 import styles from './Counter.module.css';
 
 function Counter() {
@@ -18,7 +19,17 @@ function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-    <div className={styles.wrapper}>
+    <Box
+      className={styles.wrapper}
+      sx={{
+        py: 10,
+        px: 2,
+        mt: 3,
+        boxShadow: 3,
+        borderRadius: 5,
+        backgroundColor: 'grey.100',
+      }}
+    >
       <div className={styles.row}>
         <button className={styles.button} aria-label="Decrement value" onClick={() => dispatch(decrement())}>
           -
@@ -46,7 +57,7 @@ function Counter() {
           Add If Odd
         </button>
       </div>
-    </div>
+    </Box>
   );
 }
 

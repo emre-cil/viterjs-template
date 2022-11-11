@@ -1,6 +1,11 @@
-import { Stack, Box, Typography } from '@mui/material';
-
+import { changeMode, selectMode } from '../../features/user/userSlice';
+import { Stack, Box, Typography, IconButton } from '@mui/material';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import { useDispatch, useSelector } from 'react-redux';
 const Theme = () => {
+  const dispatch = useDispatch();
+  const mode = useSelector(selectMode);
+
   const colors = [
     {
       type: 'primary',
@@ -53,20 +58,30 @@ const Theme = () => {
     'body2',
     'body3',
     'body4',
-    'button',
     'caption',
+    'button',
     'overline',
   ];
   const themeTypes = (type, func) => (
     <Stack
       sx={{
-        background: 'black',
         p: 2,
+        boxShadow: 3,
         borderRadius: 5,
+        position: 'relative',
+        backgroundColor: 'grey.100',
       }}
       gap={2}
     >
       <Typography variant="h3">{type}</Typography> {func}
+      <IconButton onClick={() => dispatch(changeMode())} sx={{ position: 'absolute', top: 10, right: 10 }}>
+        <Brightness4Icon
+          sx={{
+            transition: 'transform 0.4s',
+            transform: mode === 'dark' ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          }}
+        />
+      </IconButton>
     </Stack>
   );
 
@@ -78,6 +93,7 @@ const Theme = () => {
           <Stack key={color}>
             <Box
               sx={{
+                boxShadow: 2,
                 width: { xs: 62, sm: 100, md: 125 },
                 height: { xs: 62, sm: 100, md: 125 },
                 backgroundColor: cat.type + color,
@@ -86,13 +102,11 @@ const Theme = () => {
                 p: 0.65,
                 '& p': {
                   fontSize: { xs: 10, sm: 14, md: 16 },
-                  textShadow: '0px 0px 10px white',
+                  textShadow: mode === 'dark' ? '0px 0px 10px #000' : '0px 0px 10px #fff',
                 },
               }}
             >
-              <Typography color="black" fontWeight="bold">
-                {color}
-              </Typography>
+              <Typography fontWeight="bold">{color}</Typography>
             </Box>
           </Stack>
         ))}
