@@ -27,6 +27,7 @@ export const AppThemeProvider = ({ children }) => {
         400: mode === 'dark' ? 'rgb(155, 155, 155)' : 'rgb(155, 155, 155)',
         500: mode === 'dark' ? 'rgb(189, 189, 189)' : 'rgb(133, 134, 138)',
         600: mode === 'dark' ? 'rgb(224, 224, 224)' : 'rgb(99, 101, 106)',
+        700: mode === 'dark' ? 'rgb(240, 240, 240)' : 'rgb(70, 70, 70)',
       },
     },
 
@@ -76,60 +77,38 @@ export const AppThemeProvider = ({ children }) => {
         fontWeight: '500',
         lineHeight: '20px',
       },
+      h6: {
+        fontSize: '16px',
+        fontWeight: '500',
+        lineHeight: '19px',
+      },
 
       body1: {
         fontSize: '16px',
         fontWeight: '400',
-        lineHeight: '19px',
-      },
-      body2: {
-        fontSize: '15px',
-        fontWeight: '400',
         lineHeight: '20px',
       },
-      body3: {
-        fontSize: '13px',
+      body2: {
+        fontSize: '14px',
         fontWeight: '400',
-        lineHeight: '15px',
+        lineHeight: '18px',
       },
-
+      body3: {
+        fontSize: '12px',
+        fontWeight: '400',
+        lineHeight: '16px',
+        component: 'span',
+      },
       body4: {
-        fontSize: '11px',
+        fontSize: '10px',
         fontWeight: '400',
         lineHeight: '14px',
       },
-
-      body1Medium: {
-        fontSize: '16px',
-        fontWeight: '500',
-        lineHeight: '18px',
-      },
-      body1Big: {
-        display: 'block',
-        fontSize: '22px',
-        fontWeight: '400',
-        lineHeight: '25px',
-        '@media (max-width: 1280px)': {
-          fontSize: '18px',
-          lineHeight: '22px',
-        },
-        '@media (max-width: 825px)': {
-          fontSize: '16px',
-          lineHeight: '20px',
-        },
-      },
-      body1SemiBold: {
-        display: 'block',
-        fontFamily: 'Lato, sans-serif',
-        fontSize: '18px',
-        fontWeight: '500',
-        lineHeight: '22px',
-      },
-      textDefault: {
-        fontFamily: 'Lato, sans-serif',
-        fontSize: '16px',
-        lineHeight: '24px',
-      },
+      //subtitle1
+      //subtitle2
+      //button
+      //caption
+      //overline
     },
     components: {
       MuiLink: {
