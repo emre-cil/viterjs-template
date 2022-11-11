@@ -1,13 +1,18 @@
-import Counter from '../../features/counter/Counter';
+import Counter from '../../components/Counter/Counter';
 import { Typography, Stack } from '@mui/material';
+import Theme from '../../components/Theme/Theme';
+import { Container } from '@mui/material';
 
 const Home = () => {
   return (
-    <Stack gap={3} mt={4} alignItems="center">
-      <Typography variant="h1">Viterjs-template</Typography>
-      <Typography variant="h4">React + Redux + MuI + Axios + ESlint + Prettier</Typography>
+    <Container>
+      <Stack alignItems="center" gap={1} my={2}>
+        <Typography variant="h1">Viterjs-template</Typography>
+        <Typography variant="h4">React + Redux + MuI + Axios + ESlint + Prettier</Typography>
+      </Stack>
+      <Theme />
       <Counter />
-    </Stack>
+    </Container>
   );
 };
 

@@ -8,10 +8,16 @@ export const AppThemeProvider = ({ children }) => {
     palette: {
       mode: mode,
       primary: {
-        main: '#f08a5d',
+        main: '#DD3333',
       },
       secondary: {
-        main: '#b83b5e',
+        main: '#222489',
+      },
+      background: {
+        default: mode === 'dark' ? '#1F1F1F' : '#FCFBFA',
+        paper: mode === 'dark' ? '#131313' : '#fcfcfc',
+        opposite: mode === 'dark' ? '#FCFBFA' : '#1F1F1F',
+        light: '#FCFBFA',
       },
       grey: {
         50: mode === 'dark' ? 'rgb(70, 70, 70)' : 'rgb(246, 243, 243)',
@@ -22,14 +28,6 @@ export const AppThemeProvider = ({ children }) => {
         500: mode === 'dark' ? 'rgb(189, 189, 189)' : 'rgb(133, 134, 138)',
         600: mode === 'dark' ? 'rgb(224, 224, 224)' : 'rgb(99, 101, 106)',
       },
-
-      background: {
-        light: '#FCFBFA',
-        paper: mode === 'dark' ? '#1F1F1F' : '#FCFBFA',
-        default: mode === 'dark' ? '#1F1F1F' : '#FCFBFA',
-        opposite: mode === 'dark' ? '#FCFBFA' : '#1F1F1F',
-        gradient: 'linear-gradient(90deg, #b83b5e, #f08a5d)',
-      },
     },
 
     text: {
@@ -39,12 +37,11 @@ export const AppThemeProvider = ({ children }) => {
     },
 
     typography: {
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: 'Lato, sans-serif',
       fontstyle: 'normal',
       h1: {
         fontSize: '82px',
-        fontWeight: '400',
-        color: mode === 'dark' ? '#FCFBFA' : '#5C5C5C',
+        fontWeight: '500',
         lineHeight: '85px',
         '@media (max-width: 1280px)': {
           fontSize: '50px',
@@ -60,60 +57,57 @@ export const AppThemeProvider = ({ children }) => {
         },
       },
       h2: {
-        fontSize: '30px',
-        fontWeight: '600',
-        color: mode === 'dark' ? '#FCFBFA' : '#5C5C5C',
-        lineHeight: '33px',
+        fontSize: '26px',
+        fontWeight: '500',
+        lineHeight: '32px',
       },
       h3: {
-        fontSize: '20px',
-        fontWeight: '600',
-        color: '#ABA8AA',
-        lineHeight: '25px',
+        fontSize: '22px',
+        fontWeight: '500',
+        lineHeight: '26px',
       },
       h4: {
         fontSize: '18px',
         fontWeight: '500',
-        color: mode === 'dark' ? '#FCFBFA' : '#5C5C5C',
         lineHeight: '23px',
       },
       h5: {
-        fontSize: '16px',
+        fontSize: '17px',
         fontWeight: '500',
-        color: '#ABA8AA',
         lineHeight: '20px',
       },
 
       body1: {
         fontSize: '16px',
         fontWeight: '400',
-        color: '#ABA8AA',
         lineHeight: '19px',
       },
       body2: {
         fontSize: '15px',
         fontWeight: '400',
-        color: '#ABA8AA',
         lineHeight: '20px',
       },
       body3: {
         fontSize: '13px',
         fontWeight: '400',
-        color: '#ABA8AA',
         lineHeight: '15px',
+      },
+
+      body4: {
+        fontSize: '11px',
+        fontWeight: '400',
+        lineHeight: '14px',
       },
 
       body1Medium: {
         fontSize: '16px',
         fontWeight: '500',
-        color: '#5C5C5C',
         lineHeight: '18px',
       },
       body1Big: {
         display: 'block',
         fontSize: '22px',
         fontWeight: '400',
-        color: '#ABA8AA',
         lineHeight: '25px',
         '@media (max-width: 1280px)': {
           fontSize: '18px',
@@ -126,16 +120,14 @@ export const AppThemeProvider = ({ children }) => {
       },
       body1SemiBold: {
         display: 'block',
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Lato, sans-serif',
         fontSize: '18px',
         fontWeight: '500',
-        color: mode === 'dark' ? '#FCFBFA' : '#000',
         lineHeight: '22px',
       },
       textDefault: {
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Lato, sans-serif',
         fontSize: '16px',
-        color: mode === 'dark' ? '#FCFBFA' : '#000',
         lineHeight: '24px',
       },
     },
