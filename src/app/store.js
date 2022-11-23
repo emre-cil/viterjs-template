@@ -10,5 +10,5 @@ export const store = configureStore({
     user: userReducer,
   },
   middleware: (getdefaultMiddleware) => getdefaultMiddleware().concat(apiSlice.middleware),
-  devTools: true,
+  devTools: false,
 });

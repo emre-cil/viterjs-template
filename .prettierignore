@@ -1,7 +1,6 @@
 node_modules
 /.cache
 /.husky
-/.yarn
 .eslintignore
 .gitignore
 .git
