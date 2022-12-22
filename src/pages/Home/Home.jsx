@@ -1,6 +1,6 @@
 import { Typography, Stack, Container } from '@mui/material';
 import Counter from '../../components/Counter/Counter';
-import Theme from '../../components/Theme/Theme';
+import TemplateTester from '../../components/TemplateTester/TemplateTester';
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
           React + Redux + MuI + Axios + ESlint + Prettier
         </Typography>
       </Stack>
-      <Theme />
+      <TemplateTester />
       <Counter />
     </Container>
   );

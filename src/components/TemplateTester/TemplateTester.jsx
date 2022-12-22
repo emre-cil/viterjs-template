@@ -2,7 +2,7 @@ import { changeMode, selectMode } from '../../features/user/userSlice';
 import { Stack, Box, Typography, IconButton } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useDispatch, useSelector } from 'react-redux';
-const Theme = () => {
+const TemplateTester = () => {
   const dispatch = useDispatch();
   const mode = useSelector(selectMode);
 
@@ -128,4 +128,4 @@ const Theme = () => {
   );
 };
 
-export default Theme;
+export default TemplateTester;
