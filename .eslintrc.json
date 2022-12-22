@@ -8,20 +8,27 @@
       "version": "detect"
     }
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
-  "plugins": ["react", "react-hooks"],
+  "extends": ["plugin:react/recommended", "airbnb", "react-hooks"],
+  "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "off",
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
   }
 }

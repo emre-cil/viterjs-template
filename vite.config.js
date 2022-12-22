@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,12 +14,5 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: 'src/setupTests.ts',
     clearMocks: true,
-    coverage: {
-      provider: 'istanbul',
-      enabled: true,
-      100: true,
-      reporter: ['text', 'lcov'],
-      reportsDirectory: 'coverage',
-    },
   },
 });
