@@ -1,4 +1,7 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-nested-ternary */
 import { createSlice } from '@reduxjs/toolkit';
+
 const initialState = {
   token: null,
   user: {

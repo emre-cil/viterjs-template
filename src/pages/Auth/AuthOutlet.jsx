@@ -1,7 +1,7 @@
 import { Stack, useTheme, Typography } from '@mui/material';
 import { FormSX } from './Auth.styles';
 
-const AuthOutlet = ({ children, header }) => {
+function AuthOutlet({ children, header }) {
   const theme = useTheme();
   return (
     <form>
@@ -27,6 +27,6 @@ const AuthOutlet = ({ children, header }) => {
       </Stack>
     </form>
   );
-};
+}
 
 export default AuthOutlet;

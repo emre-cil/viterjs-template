@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Box } from '@mui/material';
 import {
   decrement,
   increment,
@@ -8,7 +9,6 @@ import {
   incrementIfOdd,
   selectCount,
 } from '../../features/counter/counterSlice';
-import { Box } from '@mui/material';
 import styles from './Counter.module.css';
 
 function Counter() {
@@ -31,11 +31,21 @@ function Counter() {
       }}
     >
       <div className={styles.row}>
-        <button className={styles.button} aria-label="Decrement value" onClick={() => dispatch(decrement())}>
+        <button
+          type="button"
+          className={styles.button}
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
           -
         </button>
         <span className={styles.value}>{count}</span>
-        <button className={styles.button} aria-label="Increment value" onClick={() => dispatch(increment())}>
+        <button
+          type="button"
+          className={styles.button}
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
           +
         </button>
       </div>
@@ -47,13 +57,13 @@ function Counter() {
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
-        <button className={styles.button} onClick={() => dispatch(incrementByAmount(incrementValue))}>
+        <button type="button" className={styles.button} onClick={() => dispatch(incrementByAmount(incrementValue))}>
           Add Amount
         </button>
-        <button className={styles.asyncButton} onClick={() => dispatch(incrementAsync(incrementValue))}>
+        <button type="button" className={styles.asyncButton} onClick={() => dispatch(incrementAsync(incrementValue))}>
           Add Async
         </button>
-        <button className={styles.button} onClick={() => dispatch(incrementIfOdd(incrementValue))}>
+        <button type="button" className={styles.button} onClick={() => dispatch(incrementIfOdd(incrementValue))}>
           Add If Odd
         </button>
       </div>

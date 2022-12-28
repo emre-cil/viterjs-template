@@ -1,13 +1,13 @@
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { selectMode } from '../features/user/userSlice';
 import { useSelector } from 'react-redux';
+import { selectMode } from '../features/user/userSlice';
 
-export const AppThemeProvider = ({ children }) => {
+export function AppThemeProvider({ children }) {
   const mode = useSelector(selectMode);
   const theme = responsiveFontSizes(
     createTheme({
       palette: {
-        mode: mode,
+        mode,
         primary: {
           main: '#DD3333',
         },
@@ -59,11 +59,11 @@ export const AppThemeProvider = ({ children }) => {
           lineHeight: '14px',
           display: 'block',
         },
-        //subtitle1
-        //subtitle2
-        //button
-        //caption
-        //overline
+        // subtitle1
+        // subtitle2
+        // button
+        // caption
+        // overline
       },
       components: {
         MuiLink: {
@@ -91,4 +91,4 @@ export const AppThemeProvider = ({ children }) => {
   );
 
   return <ThemeProvider theme={theme}> {children} </ThemeProvider>;
-};
+}

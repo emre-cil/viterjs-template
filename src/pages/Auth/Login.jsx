@@ -2,11 +2,10 @@ import { Box, Stack, Typography, TextField, InputAdornment, Button, Link, IconBu
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AuthOutlet from './AuthOutlet';
-import { useState } from 'react';
 
-const Login = () => {
+function Login() {
   const email = useRef(null);
   const password = useRef(null);
   const navigate = useNavigate();
@@ -16,8 +15,8 @@ const Login = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
-    let user = email.current.value.replace(/\s+/g, '');
-    let pwd = password.current.value.replace(/\s+/g, '');
+    const user = email.current.value.replace(/\s+/g, '');
+    const pwd = password.current.value.replace(/\s+/g, '');
     if (user === '') {
       console.log('Please enter your email.');
       email.current.focus();
@@ -25,11 +24,11 @@ const Login = () => {
       console.log('Please enter your password.');
       password.current.focus();
     } else {
-      //do login stuff
+      // do login stuff
     }
   };
 
-  /**Focus email input when component mounted. */
+  /** Focus email input when component mounted. */
   useEffect(() => {
     email.current.focus();
   }, []);
@@ -78,6 +77,6 @@ const Login = () => {
       </Box>
     </AuthOutlet>
   );
-};
+}
 
 export default Login;

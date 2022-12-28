@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import AuthOutlet from './AuthOutlet';
 
-const Register = () => {
+function Register() {
   const ad = useRef(null);
   const soyad = useRef(null);
   const email = useRef(null);
@@ -13,11 +13,11 @@ const Register = () => {
 
   const registerHandler = async (e) => {
     e.preventDefault();
-    let FirstName = ad.current.value.replace(/\s+/g, '');
-    let LastName = soyad.current.value.replace(/\s+/g, '');
-    let Email = email.current.value.replace(/\s+/g, '');
-    let Password = password.current.value.replace(/\s+/g, '');
-    let pwdConf = passwordConf.current.value.replace(/\s+/g, '');
+    const FirstName = ad.current.value.replace(/\s+/g, '');
+    const LastName = soyad.current.value.replace(/\s+/g, '');
+    const Email = email.current.value.replace(/\s+/g, '');
+    const Password = password.current.value.replace(/\s+/g, '');
+    const pwdConf = passwordConf.current.value.replace(/\s+/g, '');
     if (FirstName === '') {
       console.log('Please enter name.');
       ad.current.focus();
@@ -46,11 +46,11 @@ const Register = () => {
       console.log('Password must contain at least one uppercase letter, one lowercase letter and one number.');
       password.current.focus();
     } else {
-      //do register stuff
+      // do register stuff
     }
   };
 
-  /**Focus name input when component mounted. */
+  /** Focus name input when component mounted. */
   useEffect(() => {
     ad.current.focus();
   }, []);
@@ -86,6 +86,6 @@ const Register = () => {
       </Box>
     </AuthOutlet>
   );
-};
+}
 
 export default Register;

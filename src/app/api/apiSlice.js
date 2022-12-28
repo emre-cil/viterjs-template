@@ -17,7 +17,7 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
   if (result?.error?.originalStatus === 403) {
     const refreshResult = await baseQuery('/refresh', api, extraOptions);
     if (refreshResult?.data) {
-      const user = api.getState().auth.user;
+      const { user } = api.getState().auth;
       api.dispatch(setCredentials({ user, ...refreshResult.data }));
       result = await baseQuery(args, api, extraOptions);
     } else {

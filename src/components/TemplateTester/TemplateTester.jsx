@@ -1,8 +1,9 @@
-import { changeMode, selectMode } from '../../features/user/userSlice';
 import { Stack, Box, Typography, IconButton } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useDispatch, useSelector } from 'react-redux';
-const TemplateTester = () => {
+import { changeMode, selectMode } from '../../features/user/userSlice';
+
+function TemplateTester() {
   const dispatch = useDispatch();
   const mode = useSelector(selectMode);
 
@@ -126,6 +127,6 @@ const TemplateTester = () => {
       {themeTypes('#Typography', typoCards)}
     </Stack>
   );
-};
+}
 
 export default TemplateTester;
