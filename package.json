@@ -47,7 +47,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.2",
     "@reduxjs/toolkit": "^1.9.1",
-    "axios": "^1.2.1",
+    "axios": "^1.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -58,7 +58,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.1",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -68,6 +68,6 @@
     "prettier": "^2.8.1",
     "vite": "^4.0.3",
     "vite-plugin-fonts": "^0.7.0",
-    "vitest": "^0.26.2"
+    "vitest": "^0.26.3"
   }
 }
