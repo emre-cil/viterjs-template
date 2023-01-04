@@ -45,7 +45,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.2",
+    "@mui/material": "^5.11.3",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.2",
     "react": "^18.2.0",
@@ -54,19 +54,19 @@
     "react-router-dom": "^6.6.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.7",
+    "@babel/core": "^7.20.12",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.1",
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.1",
-    "vite": "^4.0.3",
+    "vite": "^4.0.4",
     "vite-plugin-fonts": "^0.7.0",
     "vitest": "^0.26.3"
   }
