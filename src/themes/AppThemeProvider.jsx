@@ -1,8 +1,13 @@
-import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import React from 'react';
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+} from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 import { selectMode } from '../features/user/userSlice';
 
-export function AppThemeProvider({ children }) {
+function AppThemeProvider({ children }) {
   const mode = useSelector(selectMode);
   const theme = responsiveFontSizes(
     createTheme({
@@ -90,5 +95,7 @@ export function AppThemeProvider({ children }) {
     }),
   );
 
-  return <ThemeProvider theme={theme}> {children} </ThemeProvider>;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
+
+export default AppThemeProvider;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Box } from '@mui/material';
 import {
@@ -57,13 +57,25 @@ function Counter() {
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
-        <button type="button" className={styles.button} onClick={() => dispatch(incrementByAmount(incrementValue))}>
+        <button
+          type="button"
+          className={styles.button}
+          onClick={() => dispatch(incrementByAmount(incrementValue))}
+        >
           Add Amount
         </button>
-        <button type="button" className={styles.asyncButton} onClick={() => dispatch(incrementAsync(incrementValue))}>
+        <button
+          type="button"
+          className={styles.asyncButton}
+          onClick={() => dispatch(incrementAsync(incrementValue))}
+        >
           Add Async
         </button>
-        <button type="button" className={styles.button} onClick={() => dispatch(incrementIfOdd(incrementValue))}>
+        <button
+          type="button"
+          className={styles.button}
+          onClick={() => dispatch(incrementIfOdd(incrementValue))}
+        >
           Add If Odd
         </button>
       </div>

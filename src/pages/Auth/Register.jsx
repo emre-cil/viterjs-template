@@ -1,6 +1,6 @@
 import { Box, Stack, Typography, TextField, Button, Link } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import AuthOutlet from './AuthOutlet';
 
 function Register() {
@@ -19,31 +19,33 @@ function Register() {
     const Password = password.current.value.replace(/\s+/g, '');
     const pwdConf = passwordConf.current.value.replace(/\s+/g, '');
     if (FirstName === '') {
-      console.log('Please enter name.');
+      // 'Please enter name.'
       ad.current.focus();
     } else if (LastName === '') {
-      console.log('Please enter surname.');
+      // 'Please enter surname.'
       soyad.current.focus();
     } else if (Email === '') {
-      console.log('Please enter email.');
+      // 'Please enter email.'
       email.current.focus();
     } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{1,20}$/.test(Email)) {
-      console.log('Please enter real email.');
+      // 'Please enter real email.'
       email.current.focus();
     } else if (Password === '') {
-      console.log('Please enter password.');
+      // 'Please enter password.'
       password.current.focus();
     } else if (pwdConf === '') {
-      console.log('Please enter password again.');
+      // 'Please enter password again.'
       passwordConf.current.focus();
     } else if (Password !== pwdConf) {
-      console.log('Passwords do not match.');
+      // 'Passwords do not match.'
       password.current.focus();
     } else if (Password.length < 6) {
-      console.log('Password must be at least 6 characters.');
+      // 'Password must be at least 6 characters.'
       password.current.focus();
-    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/.test(Password)) {
-      console.log('Password must contain at least one uppercase letter, one lowercase letter and one number.');
+    } else if (
+      !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/.test(Password)
+    ) {
+      // 'Password must contain at least one uppercase letter, one lowercase letter and one number.',
       password.current.focus();
     } else {
       // do register stuff
@@ -58,11 +60,35 @@ function Register() {
   return (
     <AuthOutlet>
       <Stack direction="row" gap={3} sx={{ alignItems: 'center' }}>
-        <TextField inputRef={ad} label="Name" type="text" variant="outlined" autoComplete="off" />
-        <TextField inputRef={soyad} label="Surname" type="text" variant="outlined" autoComplete="off" />
+        <TextField
+          inputRef={ad}
+          label="Name"
+          type="text"
+          variant="outlined"
+          autoComplete="off"
+        />
+        <TextField
+          inputRef={soyad}
+          label="Surname"
+          type="text"
+          variant="outlined"
+          autoComplete="off"
+        />
       </Stack>
-      <TextField inputRef={email} type="email" label="E-mail" variant="outlined" autoComplete="off" />
-      <TextField inputRef={password} type="password" autoComplete="new-password" label="Password" variant="outlined" />
+      <TextField
+        inputRef={email}
+        type="email"
+        label="E-mail"
+        variant="outlined"
+        autoComplete="off"
+      />
+      <TextField
+        inputRef={password}
+        type="password"
+        autoComplete="new-password"
+        label="Password"
+        variant="outlined"
+      />
       <TextField
         inputRef={passwordConf}
         hidden
@@ -78,9 +104,13 @@ function Register() {
 
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Typography variant="body2" component="p">
-          Alredy have an account?{' '}
+          Alredy have an account?
         </Typography>
-        <Link variant="body2" sx={{ display: 'inline', ml: 1 }} onClick={() => navigate('/login')}>
+        <Link
+          variant="body2"
+          sx={{ display: 'inline', ml: 1 }}
+          onClick={() => navigate('/login')}
+        >
           Sign In
         </Link>
       </Box>

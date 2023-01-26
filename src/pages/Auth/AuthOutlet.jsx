@@ -1,3 +1,4 @@
+import React from 'react';
 import { Stack, useTheme, Typography } from '@mui/material';
 import { FormSX } from './Auth.styles';
 
@@ -19,7 +20,11 @@ function AuthOutlet({ children, header }) {
           </Typography>
         ) : (
           <img
-            src={theme.palette.mode === 'dark' ? 'https://picsum.photos/100/50' : 'https://picsum.photos/200/300'}
+            src={
+              theme.palette.mode === 'dark'
+                ? 'https://picsum.photos/100/50'
+                : 'https://picsum.photos/200/300'
+            }
             alt="logo"
           />
         )}

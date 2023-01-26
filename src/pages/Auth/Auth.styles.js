@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const FormSX = {
   p: 3,
   zIndex: 1,
@@ -52,14 +53,16 @@ export const FormSX = {
     top: '-35%',
     left: '75%',
     animation: 'wawes 6s linear infinite',
-    background: 'linear-gradient(90deg, rgba(0, 101, 243, 0.2) 0%, rgba(0, 120, 255, 0.4) 100%)',
+    background:
+      'linear-gradient(90deg, rgba(0, 101, 243, 0.2) 0%, rgba(0, 120, 255, 0.4) 100%)',
   },
 
   '&::after': {
     top: '-30%',
     left: '70%',
     animation: 'wawes 8s linear infinite',
-    background: 'linear-gradient(90deg, rgba(0, 110, 255, 0.5) 0%, rgba(0, 120, 255, 0.3) 100%)',
+    background:
+      'linear-gradient(90deg, rgba(0, 110, 255, 0.5) 0%, rgba(0, 120, 255, 0.3) 100%)',
   },
 
   '& span': {

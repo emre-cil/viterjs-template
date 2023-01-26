@@ -1,8 +1,17 @@
-import { Box, Stack, Typography, TextField, InputAdornment, Button, Link, IconButton } from '@mui/material';
+import {
+  Box,
+  Stack,
+  Typography,
+  TextField,
+  InputAdornment,
+  Button,
+  Link,
+  IconButton,
+} from '@mui/material';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AuthOutlet from './AuthOutlet';
 
 function Login() {
@@ -18,10 +27,10 @@ function Login() {
     const user = email.current.value.replace(/\s+/g, '');
     const pwd = password.current.value.replace(/\s+/g, '');
     if (user === '') {
-      console.log('Please enter your email.');
+      // Please enter your email.
       email.current.focus();
     } else if (pwd === '') {
-      console.log('Please enter your password.');
+      // 'Please enter your password.'
       password.current.focus();
     } else {
       // do login stuff
@@ -35,7 +44,13 @@ function Login() {
 
   return (
     <AuthOutlet>
-      <TextField inputRef={email} type="email" label="E-mail" variant="outlined" autoComplete="off" />
+      <TextField
+        inputRef={email}
+        type="email"
+        label="E-mail"
+        variant="outlined"
+        autoComplete="off"
+      />
       <Stack gap={1}>
         <TextField
           inputRef={password}
@@ -59,7 +74,11 @@ function Login() {
             ),
           }}
         />
-        <Link variant="body2" textAlign="right" onClick={() => navigate('/forgot-password')}>
+        <Link
+          variant="body2"
+          textAlign="right"
+          onClick={() => navigate('/forgot-password')}
+        >
           Forgot password?
         </Link>
 
@@ -69,9 +88,13 @@ function Login() {
       </Stack>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Typography variant="body2" component="p">
-          Dont you have an account?{' '}
+          Dont you have an account?
         </Typography>
-        <Link variant="body2" sx={{ display: 'inline', ml: 1 }} onClick={() => navigate('/register')}>
+        <Link
+          variant="body2"
+          sx={{ display: 'inline', ml: 1 }}
+          onClick={() => navigate('/register')}
+        >
           Register
         </Link>
       </Box>

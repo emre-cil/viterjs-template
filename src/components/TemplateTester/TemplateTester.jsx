@@ -1,3 +1,4 @@
+import React from 'react';
 import { Stack, Box, Typography, IconButton } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useDispatch, useSelector } from 'react-redux';
@@ -34,7 +35,18 @@ function TemplateTester() {
     },
     {
       type: 'grey',
-      colors: ['.50', '.100', '.200', '.300', '.400', '.500', '.600', '.700', '.800', '.900'],
+      colors: [
+        '.50',
+        '.100',
+        '.200',
+        '.300',
+        '.400',
+        '.500',
+        '.600',
+        '.700',
+        '.800',
+        '.900',
+      ],
     },
     {
       type: 'background',
@@ -75,7 +87,10 @@ function TemplateTester() {
       gap={2}
     >
       <Typography variant="h3">{type}</Typography> {func}
-      <IconButton onClick={() => dispatch(changeMode())} sx={{ position: 'absolute', top: 10, right: 10 }}>
+      <IconButton
+        onClick={() => dispatch(changeMode())}
+        sx={{ position: 'absolute', top: 10, right: 10 }}
+      >
         <Brightness4Icon
           sx={{
             transition: 'transform 0.4s',
@@ -103,7 +118,8 @@ function TemplateTester() {
                 p: 0.65,
                 '& p': {
                   fontSize: { xs: 10, sm: 14, md: 16 },
-                  textShadow: mode === 'dark' ? '0px 0px 10px #000' : '0px 0px 10px #fff',
+                  textShadow:
+                    mode === 'dark' ? '0px 0px 10px #000' : '0px 0px 10px #fff',
                 },
               }}
             >
