@@ -21,6 +21,11 @@
     "prettier/prettier": "error",
     "jsx-a11y/anchor-is-valid": "off",
     "react-hooks/exhaustive-deps": "off",
+    //allow short circuiting
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
