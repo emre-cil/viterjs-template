@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack, Box, Typography, IconButton } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeMode, selectMode } from '../../features/user/userSlice';
+import { changeMode, selectMode } from '@/features/user/userSlice';
 
 function TemplateTester() {
   const dispatch = useDispatch();
