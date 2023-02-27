@@ -37,6 +37,12 @@ function AppThemeProvider({ children }) {
           800: mode === 'dark' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 15%)',
           900: mode === 'dark' ? 'hsl(0, 10%, 97%)' : 'hsl(0, 0%, 9%)',
         },
+
+        Gradient: {
+          Bronze: 'linear-gradient(180deg, #9C6D3E 0%, #E8C8A9 100%)',
+          Silver: 'linear-gradient(180deg, #808080 0%, #DFDFDF 100%)',
+          Gold: 'linear-gradient(180deg, #A3873C 0%, #E3D294 100%)',
+        },
       },
 
       text: {
@@ -71,6 +77,16 @@ function AppThemeProvider({ children }) {
         // overline
       },
       components: {
+        // CSS BODY
+        MuiCssBaseline: {
+          styleOverrides: {
+            body: {
+              backgroundColor: '#000',
+              color: '#fff',
+              height: '100%',
+            },
+          },
+        },
         MuiLink: {
           styleOverrides: {
             root: {
