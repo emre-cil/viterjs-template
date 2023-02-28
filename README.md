@@ -34,19 +34,21 @@ Application using absolute paths
 Example: '@/components/Counter/Counter';
 
 if you don't want to use you can remove these lines from
-vite.config.ts
+
+> vite.config.js
 
 ```
  resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
 ```
 
-tsconfig.json
+> jsconfig.json
 
-````
+```
 "paths": {
       "@/*": ["./*"]
     }
