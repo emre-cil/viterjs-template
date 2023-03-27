@@ -21,27 +21,25 @@ function AppThemeProvider({ children }) {
         },
         background: {
           default: mode === 'dark' ? '#1F1F1F' : '#FCFBFA',
-          paper: mode === 'dark' ? '#131313' : '#fcfcfc',
           opposite: mode === 'dark' ? '#FCFBFA' : '#1F1F1F',
-          light: '#FCFBFA',
+          paper: mode === 'dark' ? '#131313' : '#FCFCFC',
         },
         grey: {
-          50: mode === 'dark' ? 'hsl(0, 0%, 9%)' : 'hsl(0, 10%, 97%)',
-          100: mode === 'dark' ? 'hsl(0, 0%, 15%)' : 'hsl(0, 0%, 92%)',
-          200: mode === 'dark' ? 'hsl(0, 0%, 25%)' : 'hsl(0, 0%, 83%)',
-          300: mode === 'dark' ? 'hsl(0, 0%, 35%)' : 'hsl(0, 0%, 80%)',
-          400: mode === 'dark' ? 'hsl(0, 0%, 50%)' : 'hsl(0, 0%, 70%)',
-          500: mode === 'dark' ? 'hsl(0, 0%, 70%)' : 'hsl(0, 0%, 50%)',
-          600: mode === 'dark' ? 'hsl(0, 0%, 80%)' : 'hsl(0, 0%, 35%)',
-          700: mode === 'dark' ? 'hsl(0, 0%, 83%)' : 'hsl(0, 0%, 25%)',
-          800: mode === 'dark' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 15%)',
-          900: mode === 'dark' ? 'hsl(0, 10%, 97%)' : 'hsl(0, 0%, 9%)',
+          50: mode === 'dark' ? 'hsl(0, 0%, 10%)' : 'hsl(0, 5%, 95%)',
+          100: mode === 'dark' ? 'hsl(0, 0%, 20%)' : 'hsl(0, 0%, 90%)',
+          200: mode === 'dark' ? 'hsl(0, 0%, 30%)' : 'hsl(0, 0%, 80%)',
+          300: mode === 'dark' ? 'hsl(0, 0%, 40%)' : 'hsl(0, 0%, 70%)',
+          400: mode === 'dark' ? 'hsl(0, 0%, 50%)' : 'hsl(0, 0%, 60%)',
+          500: mode === 'dark' ? 'hsl(0, 0%, 60%)' : 'hsl(0, 0%, 50%)',
+          600: mode === 'dark' ? 'hsl(0, 0%, 70%)' : 'hsl(0, 0%, 40%)',
+          700: mode === 'dark' ? 'hsl(0, 0%, 80%)' : 'hsl(0, 0%, 30%)',
+          800: mode === 'dark' ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)',
+          900: mode === 'dark' ? 'hsl(0, 5%, 95%)' : 'hsl(0, 0%, 10%)',
         },
-
-        Gradient: {
-          Bronze: 'linear-gradient(180deg, #9C6D3E 0%, #E8C8A9 100%)',
-          Silver: 'linear-gradient(180deg, #808080 0%, #DFDFDF 100%)',
-          Gold: 'linear-gradient(180deg, #A3873C 0%, #E3D294 100%)',
+        gradient: {
+          bronze: 'linear-gradient(180deg, #9C6D3E 0%, #E8C8A9 100%)',
+          silver: 'linear-gradient(180deg, #808080 0%, #DFDFDF 100%)',
+          gold: 'linear-gradient(180deg, #A3873C 0%, #E3D294 100%)',
         },
       },
 
@@ -70,11 +68,6 @@ function AppThemeProvider({ children }) {
           lineHeight: '14px',
           display: 'block',
         },
-        // subtitle1
-        // subtitle2
-        // button
-        // caption
-        // overline
       },
       components: {
         // CSS BODY
