@@ -1,0 +1,71 @@
+{
+  "name": "viterjs-template",
+  "version": "1.1.7",
+  "description": "React + Vite + Redux + MuI + axios + RRD + Prettier => Boilerplate",
+  "license": "MIT",
+  "author": "emrecil <info.emrecil@gmail.com>",
+  "keywords": [
+    "react",
+    "boilerplate",
+    "javaScript",
+    "starter",
+    "vite",
+    "redux",
+    "material-ui",
+    "axios",
+    "rrd",
+    "prettier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emre-cil/viterjs-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emre-cil/viterjs-template/issues"
+  },
+  "homepage": "https://github.com/emre-cil/viterjs-template#readme",
+  "scripts": {
+    "dev": "vite --open",
+    "start": "vite --open",
+    "host": "vite --open --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write",
+    "format+lint": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss}\" --write && eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cover": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react-swc": "^3.3.1",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.6",
+    "vite-plugin-fonts": "^0.7.0",
+    "vitest": "^0.31.0"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+/.cache
+/.husky
+.eslintignore
+.gitignore
+.git
+LICENSE
+build
+dist
