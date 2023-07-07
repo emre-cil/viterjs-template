@@ -2,7 +2,7 @@
 
 JavaScript + React + Redux + Mui + Axios + ESLint + Prettier
 
-![viterjs-template](https://iili.io/yYpGaV.md.png)
+![viterjs-template](https://i.ibb.co/xMMGs2Q/Screenshot-2023-07-07-105634.png)
 
 ### Getting Started
 
@@ -54,8 +54,6 @@ if you don't want to use you can remove these lines from
     }
 ```
 
-
-
 ### Scripts
 
 | Script        | Description                        |
@@ -68,6 +66,8 @@ if you don't want to use you can remove these lines from
 | pnpm format   | Runs prettier for all files        |
 | pnpm test     | Run tests                          |
 
-
 ### Check List
-````
+
+```
+
+```
