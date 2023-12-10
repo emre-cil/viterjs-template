@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"19b9392abd36413eb56e3c5d9ff8ffd5","collectionName":"CreditPlan","type":"collection"}
