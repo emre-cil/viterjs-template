@@ -1,1 +1,0 @@
-{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"path":{"$numberInt":"1"}},"name":"path_1","background":true,"unique":true}],"uuid":"ef99154020a74dbd85066c3f982d9a2b","collectionName":"staticpages","type":"collection"}

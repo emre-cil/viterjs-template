@@ -41,30 +41,30 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.19",
-    "@mui/material": "^5.14.20",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.15.0",
     "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.0.3",
-    "react-router-dom": "^6.20.1"
+    "react-redux": "^9.0.4",
+    "react-router-dom": "^6.21.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.5",
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
+    "@babel/core": "^7.23.6",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.1.1",
-    "vite": "^5.0.7",
+    "vite": "^5.0.10",
     "vitest": "^1.0.4"
   }
 }
