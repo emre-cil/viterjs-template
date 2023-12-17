@@ -1,14 +1,14 @@
+import React from 'react';
 import { Box, Stack, Typography, TextField, Button, Link } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useRef } from 'react';
 import AuthOutlet from './AuthOutlet';
 
 function Register() {
-  const ad = useRef(null);
-  const soyad = useRef(null);
-  const email = useRef(null);
-  const password = useRef(null);
-  const passwordConf = useRef(null);
+  const ad = React.useRef(null);
+  const soyad = React.useRef(null);
+  const email = React.useRef(null);
+  const password = React.useRef(null);
+  const passwordConf = React.useRef(null);
   const navigate = useNavigate();
 
   const registerHandler = async (e) => {
@@ -53,7 +53,7 @@ function Register() {
   };
 
   /** Focus name input when component mounted. */
-  useEffect(() => {
+  React.useEffect(() => {
     ad.current.focus();
   }, []);
 

@@ -11,14 +11,14 @@ import {
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import AuthOutlet from './AuthOutlet';
 
 function Login() {
-  const email = useRef(null);
-  const password = useRef(null);
+  const email = React.useRef(null);
+  const password = React.useRef(null);
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
 
@@ -38,7 +38,7 @@ function Login() {
   };
 
   /** Focus email input when component mounted. */
-  useEffect(() => {
+  React.useEffect(() => {
     email.current.focus();
   }, []);
 

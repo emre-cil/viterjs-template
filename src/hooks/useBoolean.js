@@ -1,12 +1,11 @@
-const { useState } = require('react');
-const { useCallback } = require('react');
+import React from 'react';
 
 function useBoolean(initialValue = false) {
-  const [value, setValue] = useState(initialValue);
+  const [value, setValue] = React.useState(initialValue);
 
-  const setTrue = useCallback(() => setValue(true), []);
-  const setFalse = useCallback(() => setValue(false), []);
-  const toggle = useCallback(() => setValue((x) => !x), []);
+  const setTrue = React.useCallback(() => setValue(true), []);
+  const setFalse = React.useCallback(() => setValue(false), []);
+  const toggle = React.useCallback(() => setValue((x) => !x), []);
 
   return [value, setTrue, setFalse, toggle];
 }

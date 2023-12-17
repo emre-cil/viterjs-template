@@ -44,7 +44,9 @@
   border-radius: 2px;
   transition: all 0.15s;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .textbox {
@@ -58,7 +60,9 @@
   background-color: transparent;
   outline: none;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border-radius: 5px;
 }
 
@@ -81,7 +85,9 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: width 1s linear, opacity 0.5s ease 1s;
+  transition:
+    width 1s linear,
+    opacity 0.5s ease 1s;
 }
 
 .asyncButton:active:after {
