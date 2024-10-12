@@ -1,25 +1,35 @@
-import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
-import * as path from 'path';
+import react from '@vitejs/plugin-react-swc';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    sourcemap: false,
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler', // or "modern"
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@/app': '/src/app',
+      '@/assets': '/src/assets',
+      '@/components': '/src/components',
+      '@/features': '/src/features',
+      '@/hooks': '/src/hooks',
+      '@/pages': '/src/pages',
+      '@/routes': '/src/routes',
+      '@/themes': '/src/themes',
+      '@/styles': '/src/styles',
+      '@/utils': '/src/utils',
+      '@/services': '/src/services',
+      '@/config': '/src/config',
+      '@/types': '/src/types',
+      '@/store': '/src/store',
+      '@/layout': '/src/layout',
+      '@/data': '/src/data',
+      '@/helper': '/src/helper',
+      '@/i18n': '/src/i18n',
     },
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-  },
-  test: {
-    css: false,
-    include: ['src/**/__tests__/*'],
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: 'src/setupTests.ts',
-    clearMocks: true,
   },
 });
